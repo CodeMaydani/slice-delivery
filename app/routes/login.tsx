@@ -7,8 +7,13 @@ import bikeDelivery from '~/images/delivery-bike_6947616.png'
 
 function login() {
     return (
-        <div className="grid place-items-center h-screen">
-            <Card className="h-96 w-96 p-4">
+        <div className="grid place-items-center h-screen 
+          bg-cover	
+          bg-center
+        bg-[url('https://nomoneynotime.com.au/imager/uploads/recipes/12569/shutterstock_2042520416-1_461122a663362b265b24d0ffaf0f7f5f.jpeg')]
+          ">
+            {/* bg-[linear-gradient(to_bottom,rgba(100,100,100,0.1),rgba(0,0,0,0.4)),url('https://nomoneynotime.com.au/imager/uploads/recipes/12569/shutterstock_2042520416-1_461122a663362b265b24d0ffaf0f7f5f.jpeg')] */}
+            <Card className="h-96 w-96 p-4 bg-card/85">
                 <Form method="POST" className="h-full flex flex-col items-center gap-4">
                     <img src={bikeDelivery} alt="delivey bike" className="size-20" />
                     <div className="border-b-2 border-yellow-500 w-10"></div>

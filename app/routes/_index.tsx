@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Locate, Menu, Pizza } from "lucide-react";
 import Layout from "~/components/Layout";
+import { PizzaCarusel, PizzaItem } from "~/components/PizzaCarusel";
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
 
@@ -11,11 +12,32 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+const pizzaItem: PizzaItem[] = [
+  {
+    id: 3,
+    link: '/',
+    url: 'https://firststateupdate.com/wp-content/uploads/2017/02/dpdough.jpg'
+
+  },
+  {
+    id: 1,
+    link: '/',
+    url: 'https://nomoneynotime.com.au/imager/uploads/recipes/12569/shutterstock_2042520416-1_461122a663362b265b24d0ffaf0f7f5f.jpeg'
+
+  },
+  {
+    id: 2,
+    link: '/',
+    url: 'https://www.theanthonykitchen.com/wp-content/uploads/2018/04/Garlic-Bread-1-680x453.jpg'
+
+  },
+]
 export default function Index() {
   return (
     <Layout>
       <div className="container flex flex-col gap-4 my-2">
-        <Card className="h-96
+        <PizzaCarusel pizzaItem={pizzaItem} />
+        {/* <Card className="h-96
         flex
         p-4
         bg-cover	
@@ -25,10 +47,10 @@ export default function Index() {
           <div className="mt-auto">
             <p className="text-3xl">New Pizza!</p>
             <p className="">Deliciously crafted pizzas with a perfect blend of premium toppings and savory sauces.</p>
-            <Button>Order Here</Button>
+            <Button>Order Now</Button>
           </div>
-        </Card>
-        <div className="flex gap-4 justify-center p-4">
+        </Card> */}
+        <div className="flex gap-4 justify-center p-4 flex-wrap">
           <Button variant={"outline"} className="size-60">
             <Pizza className="size-32 hover:scale-110" />
           </Button>
